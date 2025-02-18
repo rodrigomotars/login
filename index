@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restrita</title>
+    <script>
+        function verificarSenha() {
+            const senhasValidas = ["senha123", "acesso2024", "minhaSenha"]; // Lista de senhas permitidas
+            const senhaDigitada = document.getElementById("senha").value;
+            const urlDestino = "https://sites.google.com/view/seu-site"; // URL do seu Google Site
+
+            if (senhasValidas.includes(senhaDigitada)) {
+                window.location.href = urlDestino;
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Área Restrita</h2>
+    <p>Digite a senha para acessar o site:</p>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <button onclick="verificarSenha()">Acessar</button>
+</body>
+</html>
